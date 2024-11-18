@@ -1,0 +1,43 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Heladera</title>
+    <link rel="stylesheet" href="assets/styles/nueva_heladera_style.css">
+</head>
+<body>
+     <!-- Menú de navegación -->
+        <header>
+        <nav>
+                        <ul>
+                            <a href="/colaborar"><li>Colaborar</li></a>
+                            <a href="/carga_csv"><li>Carga CSV</li></a>
+                            <a href="/heladeras"><li>Heladeras</li></a>
+                            <a href="/reportes"><li>Reportes</li></a>
+                        </ul>
+                        <a href="#" class="logout">Cerrar Sesión</a>
+                    </nav>
+    </header>
+
+    <main>
+        <h1>Nueva Heladera</h1>
+
+        <div class="form-container">
+            <form action="#" method="post">
+                <label for="heladera-nombre">Nombre Heladera</label>
+                <input type="text" id="heladera-nombre" name="heladera-nombre">
+                <label for="capacidad">Capacidad</label>
+                <input type="text" id="heladera-capacidad" name="heladera-capacidad">
+                <label for="ubicacion">Ubicación</label>
+                <input type="text" id="heladera-ubicacion" name="heladera-ubicacion">
+                <br>
+                <div class="button-container">
+                    <button id="sugerir-button" type="button">Sugerir ubicación</button>
+                    <button id="agregar-button" type="submit">Agregar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

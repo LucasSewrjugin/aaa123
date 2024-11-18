@@ -1,0 +1,104 @@
+/* Personalización de estilos para el formulario de inicio de sesión */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    width: 60%;
+    max-width: 500px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    text-align: center;
+    color: #34495E;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    margin-bottom: 20px;
+}
+
+label {
+    color: #34495E;
+    font-weight: 500;
+}
+
+input.form-control {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 12px;
+    color: #34495E;
+    background-color: #f4f6f6;
+    outline: none;
+    width: 100%;
+    /* Garantiza que el input ocupe todo el ancho disponible */
+}
+
+input.form-control:focus {
+    border-color: #5DADE2;
+    box-shadow: 0 0 5px rgba(93, 173, 226, 0.5);
+}
+
+button.btn-primary {
+    background-color: #5DADE2;
+    border-color: #5DADE2;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button.btn-primary:hover {
+    background-color: #34495E;
+    border-color: #34495E;
+}
+
+a.btn-secondary {
+    background-color: #34495E;
+    border-color: #34495E;
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+a.btn-secondary:hover {
+    background-color: #5DADE2;
+    color: white;
+}
+
+.form-container.position-relative {
+    margin-bottom: 20px;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    color: #34495E;
+    cursor: pointer;
+}
+
+.toggle-password:hover {
+    color: #5DADE2;
+}

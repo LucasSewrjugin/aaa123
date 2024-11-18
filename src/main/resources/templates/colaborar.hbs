@@ -1,0 +1,80 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colaborar - Sistema de Gestión</title>
+    <link rel="stylesheet" href="assets/styles/colaborar_style.css">
+    <link rel="stylesheet" href="assets/styles/header_footer.css">
+    <link rel="stylesheet" href="assets/styles/map.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM7HSU1z9d8gA0i54BYmKG6U8Yq4f5xaDTC98i1" crossorigin="anonymous">
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+                 integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+                 crossorigin=""></script>
+
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+           integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+           crossorigin=""/>
+</head>
+<script src="assets/scripts/colaborar.js"></script>
+<body>
+
+    <header class="header">
+                 <nav class="navbar">
+                 <div class="left-header">
+                     <a href="/home" class="logo-container">
+                         <img src="assets/images/logo.png" alt="Logo" class="logo">
+                         <span class="titulo">Heladeras Comunitarias</span>
+                     </a>
+                     <!-- Contenedor para el nuevo dropdown -->
+                     {{#if userName}}
+                     <div id="options-dropdown" class="dropdown">
+                         <span class="options-info">
+                             <i class="fa-solid fa-bars"></i> Colaborar
+                         </span>
+                         <ul class="dropdown-menu">
+                             <li class="options-item"><a href="/donar_dinero"><i class="fa-solid fa-money-bill"></i> Donar Dinero</a></li>
+                             <li class="option-vianda"><a href="/donar_vianda"><i class="fa-solid fa-utensils"></i> Donar Vianda</a></li>
+                             <li class="options-item"><a href="/distribuir_viandas"><i class="fa-solid fa-arrow-right-arrow-left"></i> Distribuir Viandas</a></li>
+                         </ul>
+                     </div>
+                     {{/if}}
+                 </div>
+                     <ul class="nav-links">
+                         {{#if userName}}
+                             <li id="user-dropdown" class="dropdown">
+                                 <span class="user-info">
+                                     <i class="fa-solid fa-user"></i> {{userName}}
+                                 </span>
+                                 <ul class="dropdown-menu">
+                                     <li><a href="/logout"><i class="fa-solid fa-power-off"></i> Cerrar Sesión</a></li>
+                                 </ul>
+                             </li>
+                         {{else}}
+                             <li id="login-link">
+                                 <a href="/login" class="cta-button">Iniciar Sesión</a>
+                             </li>
+                         {{/if}}
+                     </ul>
+                 </nav>
+             </header>
+
+     <main>
+         <h2 class="titulo-mapa">Buscá tu heladera más cercana</h2>
+         <div id="map"></div>
+     </main>
+     <script>
+         const heladerasLocation = {{{heladerasJson}}};
+     </script>
+     <script src="assets/scripts/mapa_heladeras.js"></script>
+
+      <footer class="footer">
+             <p>&copy; 2024 Heladeras Comunitarias. Todos los derechos reservados.</p>
+     </footer>
+
+</body>
+<script src="assets/scripts/header_dropdown.js"></script>
+</html>

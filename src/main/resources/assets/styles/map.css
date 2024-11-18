@@ -1,0 +1,23 @@
+.popup-container {
+    align-content: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+.popup-text {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.popup-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin: auto;
+}

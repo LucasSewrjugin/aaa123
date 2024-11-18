@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribuir viandas</title>
+    <!-- Vinculando Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/distribuir_viandas_style.css">
+    <link rel="stylesheet" href="assets/styles/header_footer.css">
+</head>
+<body>
+<!-- Menú de navegación -->
+<header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="left-header">
+            <a href="/home" class="navbar-brand">
+                <img src="assets/images/logo.png" alt="Logo" class="logo">
+                <span class="titulo">Heladeras Comunitarias</span>
+            </a>
+            <!-- Contenedor para el nuevo dropdown -->
+            {{#if userName}}
+                <div id="options-dropdown" class="dropdown">
+                    <span class="options-info">
+                        <i class="fa-solid fa-bars"></i> Colaborar
+                    </span>
+                    <ul class="dropdown-menu">
+                        <li class="options-item"><a href="/donar_dinero"><i class="fa-solid fa-money-bill"></i> Donar Dinero</a></li>
+                        <li class="option-vianda"><a href="/donar_vianda"><i class="fa-solid fa-utensils"></i> Donar Vianda</a></li>
+                        <li class="options-item"><a href="/distribuir_viandas"><i class="fa-solid fa-arrow-right-arrow-left"></i> Distribuir Viandas</a></li>
+                    </ul>
+                </div>
+            {{/if}}
+        </div>
+        <ul class="nav-links ml-auto">
+            {{#if userName}}
+                <li id="user-dropdown" class="dropdown">
+                        <span class="user-info">
+                            <i class="fa-solid fa-user"></i> {{userName}}
+                        </span>
+                    <ul class="dropdown-menu">
+                        <li><a href="/logout"><i class="fa-solid fa-power-off"></i> Cerrar Sesión</a></li>
+                    </ul>
+                </li>
+            {{else}}
+                <li id="login-link">
+                    <a href="/login" class="cta-button">Iniciar Sesión</a>
+                </li>
+            {{/if}}
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h2>Indique la distribución de las viandas</h2>
+
+    <div class="form-container">
+        <form action="#" method="post">
+            <label for="heladera_origen">Heladera origen</label>
+            <input type="text" id="heladera_origen" name="heladera_origen">
+
+            <label for="heladera_destino">Heladera destino</label>
+            <input type="text" id="heladera_destino" name="heladera_destino">
+
+            <label for="heladera_destino">Cantidad de viandas</label>
+            <input type="number" id="heladera_destino" name="heladera_destino">
+
+            <!-- Checkbox para seleccionar el motivo de distribución -->
+            <label for="motivo_distribucion">Motivo de distribución</label>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="desperfecto_heladera" name="motivo_distribucion" value="DESPERFECTO_HELADERA">
+                <label class="form-check-label" for="desperfecto_heladera">Desperfecto en la heladera</label>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="falta_viandas" name="motivo_distribucion" value="FALTA_VIANDAS">
+                <label class="form-check-label" for="falta_viandas">Falta de viandas</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Distribuir</button>
+        </form>
+    </div>
+</main>
+
+<footer class="footer">
+    <p>&copy; 2024 Heladeras Comunitarias. Todos los derechos reservados.</p>
+</footer>
+
+<!-- Vinculando los scripts de Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

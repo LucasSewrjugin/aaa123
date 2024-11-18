@@ -1,0 +1,45 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heladeras</title>
+    <link rel="stylesheet" href="/assets/styles/heladera_x_style.css">
+</head>
+<body>
+
+    <!-- Menú de navegación -->
+    <header>
+    <nav>
+                    <ul>
+                        <a href="/colaborar"><li>Colaborar</li></a>
+                        <a href="/carga_csv"><li>Carga CSV</li></a>
+                        <a href="/heladeras"><li>Heladeras</li></a>
+                        <a href="/reportes"><li>Reportes</li></a>
+                    </ul>
+                    <a href="#" class="logout">Cerrar Sesión</a>
+                </nav>
+</header>
+    <!-- Contenido principal -->
+    <main>donar_vianda
+        <h1>Heladeras</h1>
+        <div class="heladera-box">
+            <h2>HELADERA {{nombre}}</h2>
+            <div class="heladera-content">
+                <img src="/assets/images/batsignal.webp" alt="Heladera X">
+                <div class="heladera-info">
+                    <p><strong>Fecha de estreno:</strong> {{fechaEstreno}} </p>
+                    <p><strong>Temperatura:</strong> {{temperatura}} °</p>
+                    <p><strong>Capacidad:</strong> {{capacidad}} viandas</p>
+                </div>
+                <div class="button-container">
+                    <a href="/heladera_x_reportar_falla" class="boton">Reportar Falla</a>
+                    <a href="/heladera/alertas" class="boton">Visualizar Alertas</a>
+                    <a href="/registrar_beneficiario" class="boton">Suscribirse</a>
+                    <a href="/distribuir_viandas" class="boton">Visualizar Viandas</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

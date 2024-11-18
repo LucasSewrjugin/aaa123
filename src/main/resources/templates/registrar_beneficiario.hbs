@@ -1,0 +1,41 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar beneficiario</title>
+    <link rel="stylesheet" href="assets/styles/registrar_beneficiario_style.css">
+</head>
+<body>
+     <!-- Menú de navegación -->
+        <header>
+        <nav>
+                        <ul>
+                            <a href="/colaborar"><li>Colaborar</li></a>
+                            <a href="/carga_csv"><li>Carga CSV</li></a>
+                            <a href="/heladeras"><li>Heladeras</li></a>
+                            <a href="/reportes"><li>Reportes</li></a>
+                        </ul>
+                        <a href="#" class="logout">Cerrar Sesión</a>
+                    </nav>
+    </header>
+
+    <main>
+        <h1>Registrar beneficiario</h1>
+
+        <div class="form-container">
+            <form action="#" method="post">
+                <label for="monto">Nombre del beneficiario</label>
+                <input type="text" id="beneficiario_nombre" name="beneficiario_nombre">
+                <label for="monto">Fecha de nacimiento</label>
+                <input type="date" id="beneficiario_cumpleaños" name="beneficiario_cumpleaños">
+                <label for="monto">Documento</label>
+                <input type="number" id="beneficiario_dni" name="beneficiario_dni">
+                <label for="monto">Menores a cargo</label>
+                <input type="number" id="beneficiario_menores_a_cargo" name="beneficiario_menores_a_cargo">
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carga CSV</title>
+    <link rel="stylesheet" href="assets/styles/carga_csv_style.css">
+</head>
+<body>
+    <header>
+        <nav>
+                <ul>
+                    <a href="/colaborar"><li>Colaborar</li></a>
+                    <a href="/carga_csv"><li>Carga CSV</li></a>
+                    <a href="/heladeras"><li>Heladeras</li></a>
+                    <a href="/reportes"><li>Reportes</li></a>
+                </ul>
+                <a href="#" class="logout">Cerrar Sesión</a>
+            </nav>
+    </header>
+
+    <main>
+        <h1>Cargar CSV</h1>
+
+        <div class="form-container">
+            <form action="#" method="post">
+                <label for="csv">Seleccione el archivo .CSV</label>
+                <!-- Subir archivo arrastrando -->
+                <div class="drop-area" id="drop-area">
+                Haz Click o Arrastra y suelta el archivo aquí
+                </div>
+                <input type="file" id="csv-file" name="csv-file" accept=".csv">
+                <!-- Mostrar nombre del archivo -->
+                <p id="file-name"></p>
+
+
+                <button type="submit">Seleccionar</button>
+            </form>
+        </div>
+    </main>
+ <script src="assets/scripts/carga_csv.js" defer></script>
+</body>
+</html>

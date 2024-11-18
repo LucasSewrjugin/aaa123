@@ -1,0 +1,38 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heladeras</title>
+    <link rel="stylesheet" href="assets/styles/heladeras_style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+             integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+             crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+             integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+             crossorigin=""></script>
+</head>
+<body>
+    <!-- Menú de navegación -->
+       <header>
+       <nav>
+                       <ul>
+                           <a class="boton" href="/colaborar"><li>Colaborar</li></a>
+                           <a class="boton" href="/carga_csv"><li>Carga CSV</li></a>
+                           <a class="boton" href="/heladeras"><li>Heladeras</li></a>
+                           <a class="boton" href="/reportes"><li>Reportes</li></a>
+                       </ul>
+                       <a href="#" class="logout">Cerrar Sesión</a>
+                   </nav>
+   </header>
+
+    <main>
+        <h1>Heladeras</h1>
+        <div id="map"></div>
+    </main>
+    <script>
+        const heladerasLocation = {{{heladerasJson}}};
+    </script>
+    <script src="assets/scripts/mapa_heladeras.js"></script>
+
+</body>
+</html>

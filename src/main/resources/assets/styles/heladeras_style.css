@@ -1,0 +1,168 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+header {
+    height: 3.5vw;
+    background-color: white;
+    border-bottom: 1px solid #eaeaea;
+}
+
+nav {
+    height: 3.5vw;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    height: inherit;
+}
+
+nav ul a {
+    border: 1px solid white;
+    height: inherit;
+    width: 5vw;
+    align-content: center;
+    text-align: center;
+}
+
+nav ul a:hover {
+    border: 1px solid black;
+    background-color: #4CAF50;
+}
+
+nav ul a li {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.logout {
+    background-color: #4CAF50;
+    color: white;
+    margin-top: 0px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    float: right;
+    position: absolute;
+    top: 2px;
+    right: 10px;
+}
+
+.logout:hover {
+    background-color: #45a049;
+}
+
+.contenedor {
+    position: relative;
+}
+
+.boton {
+    margin: 19px;
+}
+
+main {
+    max-width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+.layout {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5vh 8px;
+}
+
+.catalog-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 85%;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.catalog-item img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.catalog-item h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.catalog-item button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.catalog-item button:hover {
+    background-color: #45a049;
+}
+
+#map {
+    margin: auto;
+    height: 90%;
+    width: 90%;
+}
+
+.popup-container {
+    align-content: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+.popup-text {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.popup-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin: auto;
+}

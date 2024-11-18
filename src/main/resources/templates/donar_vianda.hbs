@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donar Vianda</title>
+    <link rel="stylesheet" href="assets/styles/donar_vianda_style.css">
+    <link rel="stylesheet" href="assets/styles/header_footer.css"> <!-- Agrega el CSS para el menú desplegable -->
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <header>
+        <nav>
+             <a href="/home" class="logo">
+                           <img src="assets/images/logo.png" alt="Logo" class="logo">
+                           <span class="titulo">Heladeras Comunitarias</span>
+             </a>
+
+            <ul>
+                <!-- Menú Desplegable Colaborar -->
+
+                <li class="dropdown">
+                    <a href="#" class="menu-item">Colaborar</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/donar_vianda" class="dropdown-item">Donar Vianda</a></li>
+                        <li><a href="/donar_dinero" class="dropdown-item">Donar Dinero</a></li>
+                        <li><a href="/registrar_beneficiario" class="dropdown-item">Registrar Beneficiario</a></li>
+                    </ul>
+                     <a href="/colaborar"><li>Heladeras</li></a>
+                </li>
+
+            </ul>
+
+            {{#if userName}}
+                               <li id="user-dropdown" class="dropdown">
+                                   <span class="user-info">
+                                       <i class="fa-solid fa-user"></i> {{userName}}
+                                   </span>
+                                   <ul class="dropdown-menu">
+                                       <li><a href="/logout"><i class="fa-solid fa-power-off"></i> Cerrar Sesión</a></li>
+                                   </ul>
+                               </li>
+                           {{else}}
+                               <li id="login-link">
+                                   <a href="/login" class="cta-button">Iniciar Sesión</a>
+                               </li>
+           {{/if}}
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="titulo-vianda">Ingresá los datos de la vianda</h2>
+            <div class="form-container">
+                <form action="/donar_vianda" method="post">
+                    <label for="heladera_nombre">Nombre de la heladera</label>
+                    <input type="text" id="heladera_nombre" name="heladera_nombre">
+
+                    <label for="vianda_nombre">Nombre de la vianda</label>
+                    <input type="text" id="vianda_nombre" name="vianda_nombre">
+
+                    <label for="vianda_calorias">Cantidad de calorías</label>
+                    <input type="number" id="vianda_calorias" name="vianda_calorias" min="0" step="1" required>
+
+                    <label for="vianda_caducidad">Fecha de caducidad</label>
+                    <input type="date" id="vianda_caducidad" name="vianda_caducidad" required>
+
+                    <button type="submit">Donar</button>
+                </form>
+            </div>
+    </main>
+
+     <footer class="footer">
+            <p>&copy; 2024 Heladeras Comunitarias. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

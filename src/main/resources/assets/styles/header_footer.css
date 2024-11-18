@@ -1,0 +1,330 @@
+/* Header */
+.header {
+    background-color: #5DADE2;
+    /* Azul suave */
+    color: white;
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+}
+
+/* Alineación general para evitar problemas de espacio */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+/* Alineación del logo y el título */
+.navbar a.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.navbar a.logo-container:hover {
+    transform: translateY(-2px);
+}
+
+/* Estilos para el logo */
+.logo {
+    height: 8vh;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Estilos para el título */
+.titulo {
+    font-size: 1.5rem;
+    color: white;
+    margin-left: 10px;
+    font-weight: bold;
+    vertical-align: middle;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 1.2rem;
+        /* Reduce el tamaño del texto en pantallas pequeñas */
+        margin-left: 5px;
+    }
+
+    .navbar {
+        padding: 5px 15px;
+        /* Reduce el padding del navbar */
+    }
+
+    .logo {
+        height: 6vh;
+        /* Reduce el tamaño del logo */
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        font-size: 1rem;
+        margin-left: 5px;
+    }
+
+    .logo {
+        height: 5vh;
+    }
+
+    .nav-links {
+        display: none;
+        /* Oculta los enlaces de navegación en pantallas muy pequeñas */
+    }
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-self: flex-end;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    margin-right: 2vw;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta-button {
+    background-color: #A2D5F2;
+    /* Azul claro */
+    color: #34495E;
+    /* Azul grisáceo oscuro */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #2C3E50;
+    /* Azul oscuro */
+}
+
+/* Footer */
+.footer {
+    background-color: #34495E;
+    /* Azul grisáceo oscuro */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para el área del usuario */
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* Alinea a la derecha */
+}
+
+#user-dropdown {
+    font-size: 1.1rem;
+    color: #2C3E50;
+    /* Azul oscuro */
+    margin-right: 2vw;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Opcional: cambiar el color del ícono y del texto al hacer hover */
+.dropdown>.user-info:hover {
+    cursor: pointer;
+    /* Cambia el cursor a una mano */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    transition: background-color 0.3s ease;
+    /* Transición suave */
+    color: #2980B9;
+    /* Azul oscuro */
+    transition: color 0.3s ease;
+    /* Transición suave */
+}
+
+/* Para que el menú no cambie de tamaño con el hover */
+.dropdown:hover .dropdown-menu {
+    margin-top: 0;
+    /* Mantiene la posición */
+}
+
+/* Botón de Cerrar Sesión */
+.dropdown-menu a {
+    text-decoration: none;
+    color: #2C3E50;
+    /* Azul oscuro */
+    font-size: 1rem;
+    display: block;
+    padding: 5px 10px;
+    transition: transform 0.2s ease, color 0.2s ease;
+    /* Transición para el efecto */
+}
+
+/* Efecto hover para Cerrar Sesión */
+.dropdown-menu a:hover {
+    transform: scale(1.05);
+    /* Aumenta ligeramente el tamaño */
+    color: #2980B9;
+    /* Cambia el color del texto a un azul más claro */
+}
+
+
+#user-dropdown i {
+    margin-right: 10px;
+    font-size: 1.3rem;
+    /* Tamaño del ícono */
+}
+
+/* Botón de Iniciar sesión */
+#login-link {
+    display: inline-block;
+}
+
+#login-link a {
+    color: #ffffff;
+    background-color: #5DADE2;
+    /* Azul suave */
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+#login-link a:hover {
+    background-color: #2C3E50;
+    /* Azul oscuro */
+}
+
+/* Contenedor principal */
+.dropdown {
+    position: relative;
+    display: flex;
+}
+
+/* Estilo del menú desplegable */
+.dropdown-menu {
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px 10px;
+    /* Reduce el relleno */
+    width: auto;
+    /* Ajusta automáticamente al contenido */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    z-index: 100;
+}
+
+/* Estilo del enlace dentro del menú */
+.dropdown-menu a {
+    display: flex;
+    /* Usamos flex para alinear el ícono y el texto */
+    align-items: center;
+    color: #2C3E50;
+    /* Azul oscuro */
+    font-size: 0.9rem;
+    /* Tamaño de texto más pequeño */
+    padding: 5px;
+    /* Ajusta el relleno interno */
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Espaciado entre el ícono y el texto */
+.dropdown-menu a i {
+    margin-right: 8px;
+    /* Espaciado a la derecha del ícono */
+    font-size: 1rem;
+    /* Tamaño del ícono */
+}
+
+/* Efecto hover */
+.dropdown-menu a:hover {
+    transform: scale(1.05);
+    color: #2980B9;
+}
+
+/* Mostrar el menú cuando el contenedor tiene la clase activa */
+.dropdown.active .dropdown-menu {
+    display: block;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Animación para el menú */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilo para el área del usuario */
+.options-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Dropdown de colaborar al lado del título */
+#options-dropdown {
+    display: flex;
+    align-items: flex-start;
+    color: white;
+    cursor: pointer;
+    vertical-align: center;
+    margin-left: 1vw;
+}
+
+/* Opcional: cambiar el color del ícono y del texto al hacer hover */
+.dropdown>.options-info:hover {
+    cursor: pointer;
+    /* Cambia el cursor a una mano */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    transition: background-color 0.3s ease;
+    /* Transición suave */
+    color: #2980B9;
+    /* Azul oscuro */
+    transition: color 0.3s ease;
+    /* Transición suave */
+}
+
+#options-dropdown i {
+    margin-right: 10px;
+    font-size: 1.3rem;
+    /* Tamaño del ícono */
+}
+
+.options-item a {
+    text-align: justify-all;
+}
+
+.option-vianda a {
+    margin-left: 3px;
+    margin-right: 5px;
+}

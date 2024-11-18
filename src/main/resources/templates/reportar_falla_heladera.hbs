@@ -1,0 +1,44 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportar Falla</title>
+    <link rel="stylesheet" href="assets/styles/reportar_falla_heladera_style.css">
+</head>
+<body>
+    <header>
+        <nav>
+                <ul>
+                    <a href="/colaborar"><li>Colaborar</li></a>
+                    <a href="/carga_csv"><li>Carga CSV</li></a>
+                    <a href="/heladeras"><li>Heladeras</li></a>
+                    <a href="/reportes"><li>Reportes</li></a>
+                </ul>
+                <a href="#" class="logout">Cerrar Sesión</a>
+            </nav>
+    </header>
+
+    <main>
+        <h1>Reportar Falla</h1>
+
+        <div class="form-container">
+            <form action="#" method="post">
+                <label for="descripcion-falla">Descripción de la falla</label>
+                <input type="text" id="descripcion-falla" name="descripcion-falla">
+                <label for="imagen-falla">Seleccione la imagen</label>
+                <!-- Subir archivo arrastrando -->
+                <div class="drop-area" id="drop-area">
+                Haz Click o Arrastra y suelta el archivo aquí
+                </div>
+                <input type="file" id="image-file" name="image-file" accept=".csv">
+                <!-- Mostrar nombre del archivo -->
+                <p id="file-name"></p>
+
+
+                <button type="submit">Aceptar</button>
+            </form>
+        </div>
+    </main>
+ <script src="assets/scripts/carga_csv.js" defer></script>
+</body>
+</html>

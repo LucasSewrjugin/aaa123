@@ -1,0 +1,117 @@
+/* Estilos generales para el formulario */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f6;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 0;
+}
+
+/* Estilo para el contenedor del formulario */
+.form-container {
+    max-width: 500px;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para el título */
+h2 {
+    margin-top: 70px;
+    color: #34495E;
+    text-align: center;
+}
+
+/* Estilo para los labels */
+label {
+    font-size: 14px;
+    color: #34495E;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Contenedor de entrada con ícono */
+.input-container {
+    display: flex;
+    align-items: center;
+    background-color: #f4f6f6;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+/* Estilo del ícono de dinero */
+.input-container i {
+    color: #5DADE2;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+/* Estilo para el campo de entrada */
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-size: 1rem;
+    background: transparent;
+    color: #34495E;
+    outline: none;
+    border-radius: 5px;
+    padding-right: 5px;
+    /* Espacio para los botones del spinner */
+}
+
+/* Personalizar los botones del spinner */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    width: 25px;
+    /* Ancho de los botones */
+    height: 40px;
+    /* Altura de los botones */
+    background-color: #f4f6f6;
+    /* Fondo para integrarse con el diseño */
+}
+
+input[type="number"]::-moz-inner-spin-button {
+    width: 25px;
+    height: 40px;
+}
+
+/* Estilo para el placeholder */
+input[type="number"]::placeholder {
+    color: #BDC3C7;
+}
+
+/* Estilo para el botón */
+form button {
+    background-color: #5DADE2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Cambio de color del botón al pasar el mouse */
+form button:hover {
+    background-color: #34495E;
+}
+
+/* Estilo para el pie de página */
+.footer {
+    background-color: #34495E;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

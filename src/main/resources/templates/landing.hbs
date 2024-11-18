@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+</head>
+<body>
+    <h1> Título </h1>
+    <!-->   Layout heladeras (primera version)
+    <section class="layout">
+                {{#each heladeras}}
+                    <div class="catalog-item">
+                        <img src="/assets/images/heladera.png" alt="{{nombre}}">
+                        <h3>{{nombre}}</h3>
+                        <button onclick="window.location.href='/heladeras/{{id}}'">Más Información</button>
+                    </div>
+                {{/each}}
+            </section>
+            <!-->
+</body>
+</html>

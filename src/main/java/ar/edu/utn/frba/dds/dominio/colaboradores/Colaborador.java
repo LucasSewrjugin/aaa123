@@ -206,7 +206,7 @@ public abstract class Colaborador {
   public void setPassword(String password) {
     ClassLoader classLoader = getClass().getClassLoader();
     String path = Objects
-        .requireNonNull(classLoader.getResource("contraseniasDebiles.txt"))
+        .requireNonNull(classLoader.getResource("ar/edu/utn/frba/dds/contraseniasDebiles.txt"))
         .getPath();
     this.password = ValidadorCredenciales.getInstance(path)
         .calcularHash(password);

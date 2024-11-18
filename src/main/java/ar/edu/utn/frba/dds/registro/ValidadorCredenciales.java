@@ -3,6 +3,8 @@ package ar.edu.utn.frba.dds.registro;
 import ar.edu.utn.frba.dds.dominio.colaboradores.Colaborador;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -51,18 +53,21 @@ public class ValidadorCredenciales {
   // PATH de txt:
   // src/main/java/ar/edu/utn/frba/dds/resources/contraseniasDebiles.txt
   private void cargarContraseniasDebiles(Set<String> contraseniasDebiles) {
-    File archivo = new File(this.path);
-    try (Scanner scanner = new Scanner(archivo)) {
-      while (scanner.hasNextLine()) {
-        String linea = scanner.nextLine().trim();
-        if (!linea.isEmpty()) { // Ignorar líneas vacías
-          contraseniasDebiles.add(linea);
+    try (InputStream inputStream = getClass().getClassLoader().getResourceAsStream("ar/edu/utn/frba/dds/contraseniasDebiles.txt")) {
+      assert inputStream != null;
+      try (Scanner scanner = new Scanner(inputStream)) {
+
+        while (scanner.hasNextLine()) {
+          String linea = scanner.nextLine().trim();
+          if (!linea.isEmpty()) {
+            contraseniasDebiles.add(linea);
+          }
         }
       }
-    } catch (FileNotFoundException e) {
-      throw new IllegalArgumentException("No se pudo encontrar el archivo");
-      // System.err.println("No se pudo encontrar el archivo: " +
-      // e.getMessage());
+    } catch (NullPointerException e) {
+      throw new IllegalArgumentException("El archivo de contraseñas débiles no fue encontrado en resources", e);
+    } catch (IOException e) {
+      throw new RuntimeException("Error al leer el archivo de contraseñas débiles", e);
     }
   }
   

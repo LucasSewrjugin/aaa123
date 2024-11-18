@@ -81,8 +81,7 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-csv</artifactId>
-            <version>1.10.0</version> <!-- Verifica la versión más reciente en el
-            repositorio de Maven -->
+            <version>1.10.0</version>
         </dependency>
 
         <dependency>  <!-- JakartaMail se trasladó a Eclipse Angus (eso dice en el
@@ -92,11 +91,17 @@
             <version>2.0.1</version>
         </dependency>
 
-        <!--dependency>
+        <dependency>
           <groupId>org.hibernate</groupId>
           <artifactId>hibernate-core</artifactId>
-          <version>5.6.14.Final</version>
-        </dependency-->
+          <version>5.6.15.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.logging</groupId>
+            <artifactId>jboss-logging</artifactId>
+            <version>3.5.3.Final</version>
+        </dependency>
 
         <dependency>
             <groupId>io.javalin</groupId>
@@ -233,15 +238,39 @@
                     <target>17</target>
                 </configuration>
             </plugin>
+
+            <!-- <plugin>
+                Plugin para generar .jar con las dependencias 
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.4.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                            <goals>
+                                <goal>shade</goal>
+                            </goals>
+                            <configuration>
+                                <finalName>heladera-comunitarias</finalName>
+                                <transformers>
+                                    <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                        <mainClass>ar.edu.utn.frba.dds.server.App</mainClass>
+                                    </transformer>
+                                </transformers>
+                            </configuration>
+                    </execution>
+                </executions>
+            </plugin> -->
+
+            <!-- Build an executable JAR -->
             <plugin>
-                <!-- Build an executable JAR -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>3.3.0</version>
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>ar.edu.utn.frba.dds.server.Server</mainClass>
+                            <mainClass>ar.edu.utn.frba.dds.server.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

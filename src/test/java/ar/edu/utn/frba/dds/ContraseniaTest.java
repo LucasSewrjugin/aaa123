@@ -24,7 +24,7 @@ public class ContraseniaTest {
      */
     ClassLoader classLoader = getClass().getClassLoader();
     String path = Objects
-        .requireNonNull(classLoader.getResource("contraseniasDebiles.txt")).getPath();
+        .requireNonNull(classLoader.getResource("ar/edu/utn/frba/dds/contraseniasDebiles.txt")).getPath();
     validador = ValidadorCredenciales.getInstance(path);
   }
   

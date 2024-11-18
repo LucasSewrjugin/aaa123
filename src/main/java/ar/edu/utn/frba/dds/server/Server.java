@@ -21,7 +21,7 @@ public class Server {
       initializeTemplating(config);
     });
     new Router().configure(app);
-    app.start(80);
+    app.start(5000);
   }
   
   private void initializeTemplating(JavalinConfig config) {

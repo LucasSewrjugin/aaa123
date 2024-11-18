@@ -22,7 +22,7 @@
       </plugin>
       <plugin>
         <artifactId>maven-shade-plugin</artifactId>
-        <version>3.6.0</version>
+        <version>3.4.1</version>
         <executions>
           <execution>
             <phase>package</phase>
@@ -30,8 +30,12 @@
               <goal>shade</goal>
             </goals>
             <configuration>
-              <createDependencyReducedPom>true</createDependencyReducedPom>
-              <minimizeJar>true</minimizeJar>
+              <finalName>heladera-comunitarias</finalName>
+              <transformers>
+                <transformer>
+                  <mainClass>ar.edu.utn.frba.dds.server.App</mainClass>
+                </transformer>
+              </transformers>
             </configuration>
           </execution>
         </executions>
@@ -42,7 +46,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>ar.edu.utn.frba.dds.server.Server</mainClass>
+              <mainClass>ar.edu.utn.frba.dds.server.App</mainClass>
             </manifest>
           </archive>
         </configuration>

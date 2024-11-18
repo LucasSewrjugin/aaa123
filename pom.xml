@@ -239,8 +239,8 @@
                 </configuration>
             </plugin>
 
-            <!-- <plugin>
-                Plugin para generar .jar con las dependencias 
+             <plugin>
+                 <!--Plugin para generar .jar con las dependencias  -->
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
                 <version>3.4.1</version>
@@ -260,7 +260,7 @@
                             </configuration>
                     </execution>
                 </executions>
-            </plugin> -->
+            </plugin>
 
             <!-- Build an executable JAR -->
             <plugin>

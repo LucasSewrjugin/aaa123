@@ -51,4 +51,4 @@ jobs:
           app-name: 'probemosAhoraLocalmente'
           slot-name: 'Production'
           package: '*.jar'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B0F3A2E0C89A498C97AD3B95F30D971D }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_42BB325523944DDBB3C48F9D5F86C403 }}

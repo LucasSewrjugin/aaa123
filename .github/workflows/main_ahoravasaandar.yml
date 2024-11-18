@@ -51,4 +51,5 @@ jobs:
           app-name: 'ahoraVasAAndar'
           slot-name: 'Production'
           package: '*.jar'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_293CB79D6DDF40F69A207AF360B8C30F }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          # publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_293CB79D6DDF40F69A207AF360B8C30F }}

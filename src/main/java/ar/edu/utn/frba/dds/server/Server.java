@@ -18,12 +18,18 @@ public class Server {
   public void start() {
     var app = Javalin.create(config -> {
       initializeStaticFiles(config);
+      config.staticFiles.add("/assets");
       initializeTemplating(config);
     });
     new Router().configure(app);
-    app.start(5000);
+
+    int port = Integer.parseInt(System.getenv().getOrDefault("PORT", "5000"));
+
+    app.start(port);
   }
-  
+
+
+
   private void initializeTemplating(JavalinConfig config) {
     Handlebars handlebars = new Handlebars();
     ObjectMapper objectMapper = new ObjectMapper();

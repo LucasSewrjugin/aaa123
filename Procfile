@@ -1,1 +1,1 @@
-web: java -jar target/heladera-comunitaria.jar
+web: java -jar target/heladera-comunitarias.jar
